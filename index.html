@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Campus Connect — Join the Community</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Outfit:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+
+  <!-- ── FLOATING BLOBS (background decoration) ── -->
+  <div class="blob blob--1" aria-hidden="true"></div>
+  <div class="blob blob--2" aria-hidden="true"></div>
+  <div class="blob blob--3" aria-hidden="true"></div>
+
+  <!-- ══════════════════════════════════════
+       NAVIGATION
+  ══════════════════════════════════════ -->
+  <nav class="nav">
+    <div class="nav__inner">
+      <a href="#" class="nav__brand">
+        <span class="nav__brand-icon">⬡</span>
+        <span>Campus<strong>Connect</strong></span>
+      </a>
+      <div class="nav__links">
+        <a href="#about" class="nav__link">About</a>
+        <a href="#join" class="nav__link">Join</a>
+        <a href="#members" class="nav__link">Members</a>
+      </div>
+      <button class="nav__hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ══════════════════════════════════════
+       HERO
+  ══════════════════════════════════════ -->
+  <header class="hero">
+    <div class="hero__eyebrow">
+      <span class="pulse-dot"></span> Now accepting members
+    </div>
+    <h1 class="hero__title">
+      Where Campus<br />
+      <em>Stories</em> Meet<br />
+      <span class="hero__title-outline">Opportunity.</span>
+    </h1>
+    <p class="hero__sub">
+      Campus Connect bridges students, clubs, and events across your university —
+      one vibrant community, zero barriers.
+    </p>
+    <div class="hero__actions">
+      <a href="#join" class="btn btn--glow">Join the Community →</a>
+      <a href="#about" class="btn btn--ghost">Learn More</a>
+    </div>
+
+    <!-- live member count badge -->
+    <div class="hero__badge" id="memberBadge" style="display:none">
+      <span class="hero__badge-num" id="memberCount">0</span>
+      <span class="hero__badge-label">members joined</span>
+    </div>
+  </header>
+
+  <!-- ══════════════════════════════════════
+       ABOUT / FEATURES
+  ══════════════════════════════════════ -->
+  <section class="features section" id="about">
+    <div class="container">
+      <div class="section-tag">What we offer</div>
+      <h2 class="section-heading">Built for <em>students</em>,<br />by students.</h2>
+      <div class="features__grid">
+
+        <div class="feature-card reveal">
+          <div class="feature-card__icon">🎓</div>
+          <h3>Academic Circles</h3>
+          <p>Find study partners, share notes, and collaborate on projects across departments.</p>
+        </div>
+
+        <div class="feature-card reveal">
+          <div class="feature-card__icon">🎉</div>
+          <h3>Event Discovery</h3>
+          <p>Never miss a campus fest, hackathon, or seminar again. All events in one feed.</p>
+        </div>
+
+        <div class="feature-card reveal">
+          <div class="feature-card__icon">🤝</div>
+          <h3>Club Network</h3>
+          <p>Connect with 50+ clubs and student organisations. Find your people.</p>
+        </div>
+
+        <div class="feature-card reveal">
+          <div class="feature-card__icon">💼</div>
+          <h3>Opportunity Board</h3>
+          <p>Internships, competitions, and research spots — posted exclusively for members.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════
+       JOIN FORM
+  ══════════════════════════════════════ -->
+  <section class="join section" id="join">
+    <div class="container">
+      <div class="join__layout">
+
+        <!-- LEFT: info panel -->
+        <div class="join__info reveal">
+          <div class="section-tag">Join now — it's free</div>
+          <h2 class="join__heading">Become a<br /><em>Member</em> Today</h2>
+          <ul class="join__perks">
+            <li><span class="perk-icon">✓</span> Instant community access</li>
+            <li><span class="perk-icon">✓</span> Weekly campus digest email</li>
+            <li><span class="perk-icon">✓</span> Exclusive event invites</li>
+            <li><span class="perk-icon">✓</span> Peer mentorship matching</li>
+          </ul>
+          <div class="join__quote">
+            <blockquote>"Campus Connect changed how I found internships and met my co-founder!"</blockquote>
+            <cite>— Priya S., CSE Final Year</cite>
+          </div>
+        </div>
+
+        <!-- RIGHT: form -->
+        <div class="join__form-wrap reveal">
+          <div class="form-card">
+            <div class="form-card__header">
+              <h3>Register Your Spot</h3>
+              <p>Takes less than 60 seconds</p>
+            </div>
+
+            <!-- Status message -->
+            <div class="form-status" id="formStatus" aria-live="polite"></div>
+
+            <form id="joinForm" class="join-form" novalidate>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="fullName">Full Name *</label>
+                  <input type="text" id="fullName" name="fullName" placeholder="Arjun Sharma" autocomplete="name"
+                    required />
+                  <span class="form-err" id="fullNameErr"></span>
+                </div>
+                <div class="form-group">
+                  <label for="email">College Email *</label>
+                  <input type="email" id="email" name="email" placeholder="arjun@college.edu" autocomplete="email"
+                    required />
+                  <span class="form-err" id="emailErr"></span>
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="college">College / University *</label>
+                  <input type="text" id="college" name="college" placeholder="BMS College of Engineering" required />
+                  <span class="form-err" id="collegeErr"></span>
+                </div>
+                <div class="form-group">
+                  <label for="year">Year of Study *</label>
+                  <select id="year" name="year" required>
+                    <option value="" disabled selected>Select year</option>
+                    <option value="1st Year">1st Year</option>
+                    <option value="2nd Year">2nd Year</option>
+                    <option value="3rd Year">3rd Year</option>
+                    <option value="4th Year">4th Year</option>
+                    <option value="Postgraduate">Postgraduate</option>
+                    <option value="PhD">PhD</option>
+                  </select>
+                  <span class="form-err" id="yearErr"></span>
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="branch">Branch / Major *</label>
+                  <input type="text" id="branch" name="branch" placeholder="Computer Science & Engineering" required />
+                  <span class="form-err" id="branchErr"></span>
+                </div>
+                <div class="form-group">
+                  <label for="phone">WhatsApp Number</label>
+                  <input type="tel" id="phone" name="phone" placeholder="+91 98765 43210" autocomplete="tel" />
+                </div>
+              </div>
+
+              <div class="form-group form-group--full">
+                <label for="interests">Your Interests</label>
+                <div class="interest-chips" id="interestChips">
+                  <button type="button" class="chip" data-value="Tech & Coding">💻 Tech & Coding</button>
+                  <button type="button" class="chip" data-value="Sports">⚽ Sports</button>
+                  <button type="button" class="chip" data-value="Music & Arts">🎨 Music & Arts</button>
+                  <button type="button" class="chip" data-value="Entrepreneurship">🚀 Entrepreneurship</button>
+                  <button type="button" class="chip" data-value="Research">🔬 Research</button>
+                  <button type="button" class="chip" data-value="Cultural Events">🎭 Cultural Events</button>
+                </div>
+                <input type="hidden" id="interests" name="interests" />
+              </div>
+
+              <div class="form-group form-group--full">
+                <label for="why">Why do you want to join? <span class="optional">(optional)</span></label>
+                <textarea id="why" name="why" rows="3"
+                  placeholder="Tell us a bit about yourself and what you hope to get from the community..."></textarea>
+              </div>
+
+              <button type="submit" class="btn btn--glow btn--submit" id="submitBtn">
+                <span class="btn-text">🚀 Join Campus Connect</span>
+                <span class="btn-loader" hidden>Joining…</span>
+              </button>
+            </form>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════
+       MEMBERS FEED  (shows last 6 joiners)
+  ══════════════════════════════════════ -->
+  <section class="members section" id="members">
+    <div class="container">
+      <div class="section-tag">Community</div>
+      <h2 class="section-heading reveal">Recent <em>Members</em></h2>
+      <p class="members__sub reveal">Welcome to everyone who joined the community!</p>
+      <div class="members__grid" id="membersGrid">
+        <!-- Populated by JS -->
+        <div class="members__empty" id="membersEmpty">
+          Be the first to join! ↑
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════
+       FOOTER
+  ══════════════════════════════════════ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__inner">
+        <div class="footer__brand">
+          <span class="nav__brand-icon">⬡</span>
+          <strong>Campus Connect</strong>
+          <span class="footer__tagline">— A student community project</span>
+        </div>
+        <p class="footer__copy">Built with Node.js · MongoDB Atlas · GitHub Actions</p>
+        <p class="footer__copy" id="footerYear"></p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+
+</html>
