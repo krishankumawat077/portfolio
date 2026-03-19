@@ -10,7 +10,7 @@ const API_BASE =
   window.location.hostname === "localhost" ||
   window.location.hostname === "127.0.0.1"
     ? "http://localhost:5000/api"
-    : "https://portfolio-backend-2t1z.onrender.com/"; // ← UPDATE THIS after Step 6
+    : "https://portfolio-backend-2t1z.onrender.com/api"; // ← UPDATE THIS after Step 6
 
 // ── DOM ELEMENTS ────────────────────────────
 const navbar =
