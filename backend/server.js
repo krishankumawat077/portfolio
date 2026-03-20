@@ -26,17 +26,6 @@ app.use(
   }),
 );
 
-app.use(
-  cors({
-    origin: (origin, cb) => {
-      if (!origin || allowedOrigins.includes(origin)) return cb(null, true);
-      cb(new Error("CORS blocked: " + origin));
-    },
-    methods: ["GET", "POST", "OPTIONS"],
-    allowedHeaders: ["Content-Type"],
-  }),
-);
-
 app.use(express.json({ limit: "10kb" }));
 
 // Rate limit — 5 signups per 15 min per IP (prevent spam)
