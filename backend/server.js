@@ -18,13 +18,11 @@ const PORT = process.env.PORT || 5000;
 app.use(helmet());
 
 // CORS — allow your frontend
-const allowedOrigins = [
-  "http://localhost:5500",
-  "http://127.0.0.1:5500",
-  "http://localhost:3000",
-  "http://127.0.0.1:3000",
-  process.env.FRONTEND_URL, // e.g. https://yourusername.github.io
-].filter(Boolean);
+app.use(cors({
+  origin: '*',
+  methods: ['GET', 'POST', 'OPTIONS'],
+  allowedHeaders: ['Content-Type'],
+}));
 
 app.use(
   cors({
