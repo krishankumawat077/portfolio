@@ -1,7 +1,6 @@
-// ════════════════════════════════════════════
 //  CAMPUS CONNECT — BACKEND
 //  Node.js + Express + MongoDB Atlas
-// ════════════════════════════════════════════
+
 require("dotenv").config();
 
 const express = require("express");

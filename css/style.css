@@ -1,8 +1,4 @@
-/* ════════════════════════════════════════════
-   CAMPUS CONNECT — CSS
-   Aesthetic: Vibrant, energetic, campus-fresh
-   Fonts: Syne (display) + Outfit (body) + JetBrains Mono
-════════════════════════════════════════════ */
+/* CAMPUS CONNECT — CSS */
 
 /* ── VARIABLES ── */
 :root {
@@ -773,9 +769,7 @@ select { -webkit-appearance: none; appearance: none; }
   to   { opacity: 1; transform: translateY(0); }
 }
 
-/* ════════════════════════════════════════════
-   RESPONSIVE
-════════════════════════════════════════════ */
+/* RESPONSIVE */
 
 /* Tablet */
 @media (max-width: 900px) {

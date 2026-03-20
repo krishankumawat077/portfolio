@@ -1,16 +1,11 @@
-/* ════════════════════════════════════════════
-   CAMPUS CONNECT — main.js
-   Handles: nav scroll, reveal, chips, form, members feed
-════════════════════════════════════════════ */
+/* CAMPUS CONNECT — main.js
+   Handles: nav scroll, reveal, chips, form, members feed */
 
-// ── CONFIG ──────────────────────────────────
-// ⚠️ After deploying your backend on Render,
-//    replace the URL below with your Render URL
 const API_BASE =
   window.location.hostname === "localhost" ||
   window.location.hostname === "127.0.0.1"
     ? "http://localhost:5000/api"
-    : "https://portfolio-backend-2t1z.onrender.com/api"; // ← UPDATE THIS after Step 6
+    : "https://portfolio-backend-2t1z.onrender.com/api"; //<- Backend
 
 // ── DOM ELEMENTS ────────────────────────────
 const navbar =

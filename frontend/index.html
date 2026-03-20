@@ -1,24 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Campus Connect — Join the Community</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Outfit:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Outfit:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap"
+    rel="stylesheet" />
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
 
-  <!-- ── FLOATING BLOBS (background decoration) ── -->
+  <!-- FLOATING BLOBS (background decoration) -->
   <div class="blob blob--1" aria-hidden="true"></div>
   <div class="blob blob--2" aria-hidden="true"></div>
   <div class="blob blob--3" aria-hidden="true"></div>
 
-  <!-- ══════════════════════════════════════
-       NAVIGATION
-  ══════════════════════════════════════ -->
+  <!-- NAVIGATION -->
   <nav class="nav">
     <div class="nav__inner">
       <a href="#" class="nav__brand">
@@ -26,8 +27,8 @@
         <span>Campus<strong>Connect</strong></span>
       </a>
       <div class="nav__links">
-        <a href="#about"   class="nav__link">About</a>
-        <a href="#join"    class="nav__link">Join</a>
+        <a href="#about" class="nav__link">About</a>
+        <a href="#join" class="nav__link">Join</a>
         <a href="#members" class="nav__link">Members</a>
       </div>
       <button class="nav__hamburger" id="hamburger" aria-label="Menu">
@@ -36,9 +37,7 @@
     </div>
   </nav>
 
-  <!-- ══════════════════════════════════════
-       HERO
-  ══════════════════════════════════════ -->
+  <!-- HERO -->
   <header class="hero">
     <div class="hero__eyebrow">
       <span class="pulse-dot"></span> Now accepting members
@@ -64,9 +63,7 @@
     </div>
   </header>
 
-  <!-- ══════════════════════════════════════
-       ABOUT / FEATURES
-  ══════════════════════════════════════ -->
+  <!-- ABOUT / FEATURES -->
   <section class="features section" id="about">
     <div class="container">
       <div class="section-tag">What we offer</div>
@@ -101,9 +98,7 @@
     </div>
   </section>
 
-  <!-- ══════════════════════════════════════
-       JOIN FORM
-  ══════════════════════════════════════ -->
+  <!-- JOIN FORM -->
   <section class="join section" id="join">
     <div class="container">
       <div class="join__layout">
@@ -140,14 +135,14 @@
               <div class="form-row">
                 <div class="form-group">
                   <label for="fullName">Full Name *</label>
-                  <input type="text" id="fullName" name="fullName"
-                    placeholder="Arjun Sharma" autocomplete="name" required />
+                  <input type="text" id="fullName" name="fullName" placeholder="Arjun Sharma" autocomplete="name"
+                    required />
                   <span class="form-err" id="fullNameErr"></span>
                 </div>
                 <div class="form-group">
                   <label for="email">College Email *</label>
-                  <input type="email" id="email" name="email"
-                    placeholder="arjun@college.edu" autocomplete="email" required />
+                  <input type="email" id="email" name="email" placeholder="arjun@college.edu" autocomplete="email"
+                    required />
                   <span class="form-err" id="emailErr"></span>
                 </div>
               </div>
@@ -155,8 +150,7 @@
               <div class="form-row">
                 <div class="form-group">
                   <label for="college">College / University *</label>
-                  <input type="text" id="college" name="college"
-                    placeholder="BMS College of Engineering" required />
+                  <input type="text" id="college" name="college" placeholder="BMS College of Engineering" required />
                   <span class="form-err" id="collegeErr"></span>
                 </div>
                 <div class="form-group">
@@ -177,14 +171,12 @@
               <div class="form-row">
                 <div class="form-group">
                   <label for="branch">Branch / Major *</label>
-                  <input type="text" id="branch" name="branch"
-                    placeholder="Computer Science & Engineering" required />
+                  <input type="text" id="branch" name="branch" placeholder="Computer Science & Engineering" required />
                   <span class="form-err" id="branchErr"></span>
                 </div>
                 <div class="form-group">
                   <label for="phone">WhatsApp Number</label>
-                  <input type="tel" id="phone" name="phone"
-                    placeholder="+91 98765 43210" autocomplete="tel" />
+                  <input type="tel" id="phone" name="phone" placeholder="+91 98765 43210" autocomplete="tel" />
                 </div>
               </div>
 
@@ -219,9 +211,7 @@
     </div>
   </section>
 
-  <!-- ══════════════════════════════════════
-       MEMBERS FEED  (shows last 6 joiners)
-  ══════════════════════════════════════ -->
+  <!-- MEMBERS FEED  (shows last 6 joiners) -->
   <section class="members section" id="members">
     <div class="container">
       <div class="section-tag">Community</div>
@@ -236,9 +226,7 @@
     </div>
   </section>
 
-  <!-- ══════════════════════════════════════
-       FOOTER
-  ══════════════════════════════════════ -->
+  <!-- FOOTER -->
   <footer class="footer">
     <div class="container">
       <div class="footer__inner">
@@ -255,4 +243,5 @@
 
   <script src="js/main.js"></script>
 </body>
+
 </html>
