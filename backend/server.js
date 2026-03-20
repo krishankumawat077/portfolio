@@ -107,11 +107,9 @@ app.post("/api/members", joinLimiter, async (req, res) => {
     // Check duplicate email
     const exists = await Member.findOne({ email: email.trim().toLowerCase() });
     if (exists) {
-      return res
-        .status(409)
-        .json({
-          message: `This email is already registered! Welcome back, ${exists.fullName.split(" ")[0]} 👋`,
-        });
+      return res.status(409).json({
+        message: `This email is already registered! Welcome back, ${exists.fullName.split(" ")[0]} 👋`,
+      });
     }
 
     const member = await Member.create({
@@ -190,8 +188,11 @@ async function startServer() {
   }
   try {
     await mongoose.connect(process.env.MONGODB_URI, {
-      serverSelectionTimeoutMS: 8000,
+      serverSelectionTimeoutMS: 30000,
+      socketTimeoutMS: 45000,
       family: 4,
+      ssl: true,
+      tls: true,
     });
     console.log("✅  MongoDB Atlas connected");
     app.listen(PORT, () =>
@@ -199,7 +200,8 @@ async function startServer() {
     );
   } catch (err) {
     console.error("❌  MongoDB connection failed:", err.message);
-    process.exit(1);
+    // process.exit(1);  // commented out so Render doesn't kill the server
+    setTimeout(() => startServer(), 5000); // retry after 5 seconds
   }
 }
 
