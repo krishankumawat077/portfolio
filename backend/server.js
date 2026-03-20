@@ -18,11 +18,13 @@ const PORT = process.env.PORT || 5000;
 app.use(helmet());
 
 // CORS — allow your frontend
-app.use(cors({
-  origin: '*',
-  methods: ['GET', 'POST', 'OPTIONS'],
-  allowedHeaders: ['Content-Type'],
-}));
+app.use(
+  cors({
+    origin: "*",
+    methods: ["GET", "POST", "OPTIONS"],
+    allowedHeaders: ["Content-Type"],
+  }),
+);
 
 app.use(
   cors({
